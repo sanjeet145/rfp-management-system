@@ -37,5 +37,5 @@ def handle_custom_exception(e):
 #         asyncio.run(coroutine_func(*args, **kwargs))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=3000)
+    app.run(debug=True, host="0.0.0.0" , port=3000)
 # input="I need to procure laptops and monitors for our new office. Budget is $50,000 total. Need delivery within 30 dyas. We need 20 laptops with 16GB RAM and 15 monitors 27-inch. Payment terms should be net 30, and We need at least 1 year warranty."
