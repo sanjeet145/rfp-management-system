@@ -1,0 +1,15 @@
+flask
+flask_sqlalchemy
+marshmallow
+python-dotenv
+passlib
+openai
+flask-jwt-extended
+python-dotenv
+groq
+requests
+flask-cors
+pdfplumber
+pandas
+python-docx
+filetype
