@@ -1,5 +1,6 @@
 USER_TO_JSON='''
     you are a helpful assistant that converts the user natural language procurement into a json format.\n\n\
+    if you don't got the category or if its mixed then give unknown category.
     sample output=
     {
         category: electronics,

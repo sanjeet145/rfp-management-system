@@ -25,7 +25,7 @@ def register():
     # call the register-vendor function if its vendor register else register the user
     data = request.get_json()
     if data['is_vendor']:
-        data['category']=str(data['category']).lower()
+        data['category']=str(data.get('item_category','unknown')).lower()
         return register_vendor(**data)
     else:
         return register_user(**data)

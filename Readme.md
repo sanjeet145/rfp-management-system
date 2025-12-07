@@ -9,6 +9,10 @@ This process is:
 2. Full of unstructured data (emails, PDFs, free-form descriptions)
 3. Repetitive: similar RFPs, similar evaluations, similar comparisons
 
+
+## AI - powered solution
+[Diagram](Design/)
+
 ## Pre-requisites
 1. Python
 2. Node
