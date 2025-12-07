@@ -25,7 +25,7 @@ def get_vendor_id(vendor_id):
 def get_vendor_category(page:int , per_page:int, category:str):
     try:
         # request.args.get("page", 1)
-        query = db.session.query(Vendors).filter(Vendors.item_category == category)
+        query = db.session.query(Vendors).filter(str(Vendors.item_category).lower() == str(category).lower())
         vendors = query.offset((page - 1) * per_page).limit(per_page).all()
         total = query.count()
         return {

@@ -25,6 +25,7 @@ def register():
     # call the register-vendor function if its vendor register else register the user
     data = request.get_json()
     if data['is_vendor']:
+        data['category']=str(data['category']).lower()
         return register_vendor(**data)
     else:
         return register_user(**data)
@@ -54,7 +55,7 @@ def single_rfps():
 @router.get('/get-vendors')
 def show_vendors():
     # get the user description and return the paginated vendors
-    category = request.args.get("category","electronics")
+    category = str(request.args.get("category","electronics")).lower()
     page = int(request.args.get("page",1))
     per_page = int(request.args.get("perpage",10))
     return jsonify({"message":get_vendor_category(page,per_page,category)}),200

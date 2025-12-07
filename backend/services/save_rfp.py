@@ -16,7 +16,7 @@ def save_rfp(input, user_id):
         text = re.sub(r'(\w+)\s*:', r'"\1":', text)
         text = re.sub(r':\s*([A-Za-z][A-Za-z0-9\s\-]*)(?=[,\}])', r': "\1"', text)
         response = json.loads(text)
-        category = response.get("category")
+        category = str(response.get("category")).lower()
         rfp = rfpSchema.load({
             "user_id": user_id,
             "description_raw": input,
