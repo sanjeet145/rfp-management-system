@@ -12,6 +12,18 @@ This process is:
 
 ## AI - powered solution
 [Diagram](Design/)
+1. User and vendor both register to the platform.
+2. User loges into the platform
+3. User enters their procurement in natural language and clicks on save RFP.
+4. LLM takes the user input and then process it. After processing it structures the data saves it into db.
+5. RFPs button will list down all the RFPs created by the user. Where user can find the vendors and their responses.
+6. According to the order category the system will show the vendors where user can send the request.
+7. LLM crafts the email based on the requirements to the vendor.
+8. Vendor gets the request over their mail in which same email vendor can reply ( inbound email service ).
+9. Vendor can also send into unstructed way including attachments (PDFs, Excel, Docs).
+10. LLM get the vendor response and craft it into structure manner to save into DB.
+11. LLM also summarize and score the response based on the rules defined.
+12. User can now see the response and place the order. 
 
 ## Pre-requisites
 1. Python
